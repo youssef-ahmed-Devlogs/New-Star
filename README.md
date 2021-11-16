@@ -2,8 +2,11 @@
 
 Real estate company
 
-1 - Home Page Done
-2 - Housing Units Page Done
-3 - Cities Page Done
-4 - Projects Page Done
-5 - Blogs Page Done
+<ol>
+  <li>Home Page Done</li>
+  <li>Housing Units Page Done</li>
+  <li>Cities Page Done</li>
+  <li>Projects Page Done</li>
+  <li>Blogs Page Done</li>
+</ol>
+
