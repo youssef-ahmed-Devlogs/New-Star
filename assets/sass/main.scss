@@ -12,6 +12,7 @@ $green: #25d366;
 $light-orange: #fef4ee;
 $white: #fff;
 $gray: #b1b8c7;
+$light: #f3f6fd;
 
 // Global
 
@@ -55,12 +56,37 @@ section {
   padding: 100px 0 0;
 }
 
+// Section Style
+.section-top {
+  padding-top: 0;
+  padding-bottom: 0;
+  transform: translateY(-60px);
+}
+
 // Section Title Versions
 .section-title_v1 {
   font-weight: bold;
   color: $blue;
   font-size: 23px;
   margin-bottom: 30px;
+}
+
+.section-title_v2 {
+  @extend .section-title_v1;
+  position: relative;
+  padding-right: 25px;
+  height: 50px;
+  line-height: 50px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: $blue;
+    width: 10px;
+    height: 100%;
+  }
 }
 
 // Cards Versions
@@ -251,6 +277,107 @@ section {
   }
 }
 
+.card_v4 {
+  @extend .card_v3;
+
+  border-radius: 15px;
+
+  .card-img {
+    border-radius: 0;
+
+    img {
+      height: initial;
+    }
+
+    .card-label {
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      color: $white;
+      font-size: 14px;
+    }
+
+    .card-details {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba($color: #000, $alpha: 0.6);
+      color: $white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      .details-item {
+        display: block;
+        padding: 8px;
+        width: calc(100% / 3);
+        display: flex;
+        flex-direction: column;
+        gap: 5px 0;
+        font-size: 15px;
+
+        i {
+          font-size: 20px;
+        }
+
+        &:nth-child(2) {
+          background-color: rgba($color: #000, $alpha: 0.6);
+        }
+      }
+    }
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .card-location {
+    display: block;
+    margin-bottom: 10px;
+
+    i {
+      color: $dark-orange;
+    }
+  }
+
+  .card-price {
+    display: block;
+    margin-bottom: 20px;
+    color: $dark-orange;
+    font-weight: bold;
+  }
+}
+
+// Pagination
+.page-item .page-link {
+  color: #000;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: $dark-orange;
+  border-color: $dark-orange;
+}
+
+.page-item:first-child .page-link {
+  border-radius: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page-item:last-child .page-link {
+  border-radius: 0;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 // Buttons
 .button {
   border: none;
@@ -275,6 +402,46 @@ section {
     rgba(43, 46, 105, 1) 69%,
     rgba(47, 45, 98, 1) 90%
   );
+}
+
+// Form Components
+
+.form-item {
+  position: relative;
+}
+
+.form-item select {
+  background-image: none;
+  padding-right: 10px;
+  appearance: none;
+}
+
+.form-select.light {
+  background-color: $light;
+}
+
+.form-item input,
+.form-item select {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 50px;
+  border-radius: 6px;
+}
+
+.form-item i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+
+.form-item .invalid-feedback {
+  position: absolute;
+  bottom: -50px;
+  background: $white;
+  padding: 10px;
+  z-index: 1;
 }
 
 /*  ================================== Header ==================================  */
@@ -343,6 +510,84 @@ header {
     padding-left: 1.2rem;
     font-size: 15px;
   }
+}
+
+// ================================== Breadcrumb ==================================
+.breadcrumb-content {
+  position: relative;
+  margin-top: 85px;
+  background-image: url("../images/breadcrumb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 50px 0 80px;
+  overflow: hidden;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewX(10px);
+  }
+
+  .head {
+    position: relative;
+    z-index: 2;
+  }
+
+  h2 {
+    font-weight: bold;
+    color: $white;
+  }
+
+  .contact-us a {
+    width: 300px;
+    padding: 10px;
+    color: $white;
+    border-radius: 6px;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      filter: saturate(140%);
+    }
+
+    i {
+      font-size: 30px;
+    }
+  }
+
+  .contact-us a:nth-child(1) {
+    background-color: $dark-orange;
+  }
+
+  .contact-us a:nth-child(2) {
+    background-color: $green;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    .head {
+      display: block !important;
+    }
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  padding: 0 10px;
+  float: initial;
+  color: $white;
+}
+
+.breadcrumb-item a {
+  color: $white !important;
+}
+
+.breadcrumb-item.active {
+  color: $dark-orange !important;
 }
 
 // ================================== Hero Section ==================================
@@ -540,6 +785,10 @@ header {
       }
     }
   }
+}
+
+// ================================== Housing Units ==================================
+.housing-units {
 }
 
 // ================================== Footer ==================================
