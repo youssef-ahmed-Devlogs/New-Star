@@ -21,3 +21,67 @@
     );
   });
 })();
+
+// ** Swiper JS Slider Config **
+
+// Section Photos Slider
+
+var sectionPhotosSlider = new Swiper(".section-photos-slider", {
+  spaceBetween: 30,
+
+  pagination: {
+    el: ".section-photos-pagination",
+    clickable: true,
+  },
+});
+
+// Section Type Swiper
+
+const sectionSwiperControlsPrev = document.querySelector(
+  ".section-swiper-controls .prev"
+);
+const sectionSwiperControlsNext = document.querySelector(
+  ".section-swiper-controls .next"
+);
+
+sectionTypeSwiperResponsive(4);
+
+if (window.innerWidth <= 600) {
+  sectionTypeSwiperResponsive(1);
+} else if (window.innerWidth <= 992) {
+  sectionTypeSwiperResponsive(2);
+} else if (window.innerWidth <= 1199) {
+  sectionTypeSwiperResponsive(3);
+}
+
+window.addEventListener("resize", () => {
+  if (this.innerWidth <= 600) {
+    sectionTypeSwiperResponsive(1);
+  } else if (this.innerWidth <= 992) {
+    sectionTypeSwiperResponsive(2);
+  } else if (this.innerWidth <= 1199) {
+    sectionTypeSwiperResponsive(3);
+  }
+});
+
+function sectionTypeSwiperResponsive(cardsCount) {
+  var sectionTypeSwiper = new Swiper(".section-type-swiper", {
+    slidesPerView: cardsCount,
+    spaceBetween: 30,
+    slidesPerGroup: cardsCount,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: ".section-type-swiper-next",
+      prevEl: ".section-type-swiper-prev",
+    },
+  });
+}
+
+sectionSwiperControlsPrev.addEventListener("click", () => {
+  document.querySelector(".section-type-swiper-prev").click();
+});
+
+sectionSwiperControlsNext.addEventListener("click", () => {
+  document.querySelector(".section-type-swiper-next").click();
+});
