@@ -672,8 +672,11 @@ header {
   padding-bottom: 0;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 
+  .container {
+    padding-right: 0;
+  }
+
   .navbar-brand {
-    transform: translateX(118px);
     background-color: $white;
     width: 300px;
     padding: 20px 0;
@@ -682,6 +685,17 @@ header {
 
     img {
       width: 120px;
+    }
+
+    @media (max-width: 600px) {
+      & {
+        width: 170px;
+        clip-path: polygon(24% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+        img {
+          width: 90px;
+        }
+      }
     }
   }
 }
@@ -730,6 +744,12 @@ header {
   background-position: center;
   padding: 50px 0 80px;
   overflow: hidden;
+
+  @media (max-width: 600px) {
+    & {
+      margin-top: 75px;
+    }
+  }
 
   .overlay {
     position: absolute;

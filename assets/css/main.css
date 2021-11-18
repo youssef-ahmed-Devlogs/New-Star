@@ -636,9 +636,11 @@ header {
           box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
+.navbar .container {
+  padding-right: 0;
+}
+
 .navbar .navbar-brand {
-  -webkit-transform: translateX(118px);
-          transform: translateX(118px);
   background-color: #fff;
   width: 300px;
   padding: 20px 0;
@@ -649,6 +651,17 @@ header {
 
 .navbar .navbar-brand img {
   width: 120px;
+}
+
+@media (max-width: 600px) {
+  .navbar .navbar-brand {
+    width: 170px;
+    -webkit-clip-path: polygon(24% 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(24% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .navbar .navbar-brand img {
+    width: 90px;
+  }
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -695,6 +708,12 @@ header {
   background-position: center;
   padding: 50px 0 80px;
   overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .breadcrumb-content {
+    margin-top: 75px;
+  }
 }
 
 .breadcrumb-content .overlay {
