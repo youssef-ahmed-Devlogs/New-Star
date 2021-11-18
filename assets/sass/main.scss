@@ -21,6 +21,11 @@ $light: #f3f6fd;
   font-weight: normal;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
 html {
   direction: rtl;
 }
@@ -69,7 +74,7 @@ section {
   border-radius: 20px;
 
   img {
-    height: 500px;
+    height: 600px;
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
@@ -111,6 +116,17 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 600px) {
+      & {
+        display: block;
+      }
+
+      & > div.d-flex {
+        justify-content: flex-end;
+        margin-bottom: 20px;
+      }
+    }
 
     button {
       border: none;
@@ -436,6 +452,53 @@ section {
   .card-text {
     @extend .card-title;
     color: $blue;
+  }
+}
+
+// Contact Us Components
+
+.direct-contact {
+  a {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border-radius: 6px;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    padding: 15px;
+
+    &:nth-child(1) {
+      background-color: #fd9704;
+    }
+
+    &:nth-child(2) {
+      background-color: #25d366;
+    }
+  }
+}
+
+.form-contact {
+  background-color: #fff;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+
+  h4 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    background: #fff;
+    border: 1px solid rgba(204, 204, 204, 0.548);
+    padding: 10px;
+    border-radius: 5px;
   }
 }
 

@@ -3,6 +3,12 @@
   font-weight: normal;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
 html {
   direction: rtl;
 }
@@ -51,7 +57,7 @@ section {
 }
 
 .section-photos-slider img {
-  height: 500px;
+  height: 600px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -91,6 +97,18 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .section-swiper .section-swiper-controls {
+    display: block;
+  }
+  .section-swiper .section-swiper-controls > div.d-flex {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-bottom: 20px;
+  }
 }
 
 .section-swiper .section-swiper-controls button {
@@ -405,6 +423,50 @@ section {
 
 .card_v5 .card-text {
   color: #3845ab;
+}
+
+.direct-contact a {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  border-radius: 6px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  padding: 15px;
+}
+
+.direct-contact a:nth-child(1) {
+  background-color: #fd9704;
+}
+
+.direct-contact a:nth-child(2) {
+  background-color: #25d366;
+}
+
+.form-contact {
+  background-color: #fff;
+  padding: 15px 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+}
+
+.form-contact h4 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.form-contact input,
+.form-contact textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  background: #fff;
+  border: 1px solid rgba(204, 204, 204, 0.548);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .tags {
