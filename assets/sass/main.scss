@@ -59,6 +59,12 @@ a {
 // Sections Spaces
 section {
   padding: 100px 0 0;
+
+  @media (max-width: 600px) {
+    & {
+      padding: 80px 0 0;
+    }
+  }
 }
 
 // Section Style
@@ -651,6 +657,30 @@ section {
   z-index: 1;
 }
 
+// toggler-side-contact-us
+
+.toggler-side-contact-us {
+  position: fixed;
+  width: 120px;
+  right: 0;
+  bottom: 50px;
+  background: $dark-orange;
+  color: $white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 14px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: none;
+
+  @media (max-width: 768px) {
+    & {
+      display: block;
+    }
+  }
+}
+
 /*  ================================== Header ==================================  */
 
 header {
@@ -781,6 +811,28 @@ header {
 
     i {
       font-size: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    & {
+      padding: 50px 0 40px;
+    }
+
+    .contact-us {
+      position: fixed;
+      right: -100%;
+      bottom: 102px;
+      background: $white;
+      box-shadow: 0 0 4px rgba($color: #000, $alpha: 0.2);
+      padding: 12px;
+      border-radius: 7px;
+      transition: 0.4s ease-in-out;
+
+      a {
+        width: 210px;
+        font-size: 13px;
+      }
     }
   }
 
