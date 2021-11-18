@@ -44,11 +44,11 @@ const sectionSwiperControlsNext = document.querySelector(
   ".section-swiper-controls .next"
 );
 
-if (window.innerWidth <= 991) {
+if (window.innerWidth <= 600) {
   sectionTypeSwiperResponsive(1);
 } else if (window.innerWidth > 1199) {
   sectionTypeSwiperResponsive(4);
-} else if (window.innerWidth > 992) {
+} else if (window.innerWidth <= 992) {
   sectionTypeSwiperResponsive(2);
 }
 
@@ -63,12 +63,10 @@ window.addEventListener("resize", () => {
 });
 
 function sectionTypeSwiperResponsive(cardsCount) {
-  console.log(cardsCount);
   new Swiper(".section-type-swiper", {
     slidesPerView: cardsCount,
     spaceBetween: 30,
     slidesPerGroup: cardsCount,
-    loop: true,
     navigation: {
       nextEl: ".section-type-swiper-next",
       prevEl: ".section-type-swiper-prev",
