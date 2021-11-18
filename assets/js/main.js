@@ -96,8 +96,16 @@ togglerSideContactUs.addEventListener("click", () => {
   if (contactOpen) {
     contactContainer.style.right = "-100%";
     contactOpen = false;
+    togglerSideContactUs.innerHTML = `
+      تواصل معنا
+      <i class="fas fa-mobile me-1"></i>
+    `;
   } else {
     contactContainer.style.right = "10px";
     contactOpen = true;
+    togglerSideContactUs.innerHTML = `
+    أغلق
+    <i class="fas fa-times-circle me-1"></i>
+  `;
   }
 });
