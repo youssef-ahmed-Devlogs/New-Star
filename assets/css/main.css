@@ -166,6 +166,12 @@ section {
   height: 100%;
 }
 
+.section-basic-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3845ab;
+}
+
 .card_v1 {
   position: relative;
   border-radius: 30px;
@@ -431,6 +437,68 @@ section {
   color: #3845ab;
 }
 
+.card_v6 {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.card_v6:hover {
+  background: #3845ab;
+}
+
+.card_v6 .card-img {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card_v6 .card-img img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.card_v6 .button-blue:hover {
+  background: #fd9704;
+  color: #fff;
+}
+
+.collapse_v1 {
+  border: 1px solid #3845ab;
+  border-radius: 5px;
+}
+
+.collapse_v1 .collapse-title {
+  text-decoration: none;
+  background: #3845ab;
+  color: #fff;
+  display: block;
+  padding: 20px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.collapse_v1 .collapse-title .collapse-btn-toggler {
+  font-size: 20px;
+}
+
+.collapse_v1 .collapse-content .card {
+  border: none;
+}
+
 .direct-contact a {
   width: 100%;
   padding: 10px;
@@ -512,11 +580,14 @@ section {
       -ms-flex-align: center;
           align-items: center;
   font-weight: bold;
+  gap: 20px;
 }
 
 .details-alert li span {
   color: #b1b8c7;
-  width: 90px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   display: block;
 }
 
@@ -527,6 +598,42 @@ section {
 
 .details-alert li.invert-color span {
   color: #332c5a;
+}
+
+.details-alert li.type-bullets {
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+}
+
+.details-alert li.type-bullets ul {
+  padding: 0;
+  margin: 0;
+}
+
+.details-alert li.type-bullets ul li {
+  position: relative;
+}
+
+.details-alert li.type-bullets ul li::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #3845ab;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.details-alert.details-alert-even li:nth-child(even) {
+  background: #fef4ee;
+}
+
+.details-alert.details-alert-even span {
+  color: #3845ab;
 }
 
 .desc_v1 {
@@ -566,10 +673,13 @@ section {
   text-decoration: none;
   background: none;
   height: 50px;
+  line-height: 50px;
   width: 100px;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   border-radius: 6px;
+  display: block;
+  text-align: center;
 }
 
 .button:hover {
@@ -581,6 +691,24 @@ section {
   color: #fff;
   background: #0b3ba6;
   background: linear-gradient(31deg, #0b3ba6 3%, #2b2e69 69%, #2f2d62 90%);
+}
+
+.button-blue-border {
+  text-decoration: none;
+  padding: 6px 30px;
+  border: 1px solid #3845ab;
+  color: #3845ab;
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: inline-block;
+  border-radius: 4px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.button-blue-border:hover {
+  background-color: #3845ab;
+  color: #fff;
 }
 
 .form-item {
@@ -734,7 +862,6 @@ header {
   background-attachment: fixed;
   background-position: center;
   padding: 50px 0 80px;
-  overflow: hidden;
 }
 
 @media (max-width: 600px) {
@@ -754,6 +881,26 @@ header {
 .breadcrumb-content .head {
   position: relative;
   z-index: 2;
+}
+
+.breadcrumb-content .breadcrumb-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  position: absolute;
+  bottom: -100px;
+}
+
+.breadcrumb-content .breadcrumb-title .breadcrumb-img img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }
 
 .breadcrumb-content h2 {

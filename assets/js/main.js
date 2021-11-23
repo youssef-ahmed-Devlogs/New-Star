@@ -109,3 +109,16 @@ togglerSideContactUs.addEventListener("click", () => {
   `;
   }
 });
+
+// Collapse Components
+const collapseTitle = document.querySelectorAll(".collapse_v1 .collapse-title");
+collapseTitle.forEach((item) => {
+  item.addEventListener("click", () => {
+    const icon = item.querySelector(".collapse-btn-toggler");
+    if (item.getAttribute("aria-expanded") == "true") {
+      icon.innerHTML = `<i class="fas fa-minus"></i>`;
+    } else {
+      icon.innerHTML = `<i class="fas fa-plus"></i>`;
+    }
+  });
+});
