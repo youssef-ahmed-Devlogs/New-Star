@@ -900,6 +900,10 @@ header {
     top: 0;
     left: 0;
     transform: skewX(10px);
+
+    img {
+      width: 100%;
+    }
   }
 
   .head {
@@ -914,12 +918,33 @@ header {
     position: absolute;
     bottom: -100px;
 
+    h2 {
+      font-size: 20px;
+    }
+
     .breadcrumb-img {
       img {
-        width: 150px;
-        height: 150px;
+        width: 130px;
+        height: 130px;
         object-fit: cover;
         border-radius: 10px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      & {
+        bottom: -120px;
+
+        h2 {
+          font-size: 16px;
+        }
+      }
+
+      .breadcrumb-img {
+        img {
+          width: 100px;
+          height: 100px;
+        }
       }
     }
   }
@@ -1204,6 +1229,90 @@ header {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       gap: 10px;
+    }
+  }
+}
+
+// Who We Are
+.about-us {
+  .about-us_img {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: -50px -60px 0 rgba($color: $orange, $alpha: 0.7);
+    transform: translateY(50px);
+    margin-bottom: 100px;
+
+    &.shadow-blue {
+      box-shadow: -50px -60px 0 rgba($color: $blue, $alpha: 0.4);
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .about-us_img {
+      width: 100%;
+      box-shadow: -5px -5px 0 rgba($color: $orange, $alpha: 0.7);
+      transform: translateY(0);
+      margin-bottom: 0px;
+      &.shadow-blue {
+        box-shadow: -5px -5px 0 rgba($color: $blue, $alpha: 0.4);
+      }
+    }
+  }
+}
+
+// Contact Us Page
+.contact-us-page {
+  h4 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  form {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 6px rgba($color: #000, $alpha: 0.2);
+
+    textarea,
+    input {
+      display: block;
+      width: 100%;
+      border: none;
+      outline: none;
+      background: none;
+      background: #fff;
+      border: 1px solid rgba(204, 204, 204, 0.548);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    button {
+      margin: auto;
+    }
+  }
+
+  .other-contact {
+    a {
+      text-decoration: none;
+      color: #fff;
+      background: #fd9704;
+      border-radius: 10px;
+      padding: 30px 20px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 25px;
+
+      i {
+        font-size: 70px;
+      }
+
+      &:nth-child(2) {
+        background: #25d366;
+      }
     }
   }
 }

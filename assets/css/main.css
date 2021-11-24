@@ -878,6 +878,10 @@ header {
           transform: skewX(10px);
 }
 
+.breadcrumb-content .overlay img {
+  width: 100%;
+}
+
 .breadcrumb-content .head {
   position: relative;
   z-index: 2;
@@ -895,12 +899,29 @@ header {
   bottom: -100px;
 }
 
+.breadcrumb-content .breadcrumb-title h2 {
+  font-size: 20px;
+}
+
 .breadcrumb-content .breadcrumb-title .breadcrumb-img img {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .breadcrumb-content .breadcrumb-title {
+    bottom: -120px;
+  }
+  .breadcrumb-content .breadcrumb-title h2 {
+    font-size: 16px;
+  }
+  .breadcrumb-content .breadcrumb-title .breadcrumb-img img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .breadcrumb-content h2 {
@@ -1188,6 +1209,98 @@ header {
   -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 10px;
+}
+
+.about-us .about-us_img {
+  width: 80%;
+  border-radius: 10px;
+  -webkit-box-shadow: -50px -60px 0 rgba(238, 168, 108, 0.7);
+          box-shadow: -50px -60px 0 rgba(238, 168, 108, 0.7);
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  margin-bottom: 100px;
+}
+
+.about-us .about-us_img.shadow-blue {
+  -webkit-box-shadow: -50px -60px 0 rgba(56, 69, 171, 0.4);
+          box-shadow: -50px -60px 0 rgba(56, 69, 171, 0.4);
+}
+
+@media (max-width: 1199px) {
+  .about-us .about-us_img {
+    width: 100%;
+    -webkit-box-shadow: -5px -5px 0 rgba(238, 168, 108, 0.7);
+            box-shadow: -5px -5px 0 rgba(238, 168, 108, 0.7);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    margin-bottom: 0px;
+  }
+  .about-us .about-us_img.shadow-blue {
+    -webkit-box-shadow: -5px -5px 0 rgba(56, 69, 171, 0.4);
+            box-shadow: -5px -5px 0 rgba(56, 69, 171, 0.4);
+  }
+}
+
+.contact-us-page h4 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-us-page form {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.contact-us-page form textarea,
+.contact-us-page form input {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  background: #fff;
+  border: 1px solid rgba(204, 204, 204, 0.548);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contact-us-page form button {
+  margin: auto;
+}
+
+.contact-us-page .other-contact a {
+  text-decoration: none;
+  color: #fff;
+  background: #fd9704;
+  border-radius: 10px;
+  padding: 30px 20px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  font-size: 25px;
+}
+
+.contact-us-page .other-contact a i {
+  font-size: 70px;
+}
+
+.contact-us-page .other-contact a:nth-child(2) {
+  background: #25d366;
 }
 
 footer {

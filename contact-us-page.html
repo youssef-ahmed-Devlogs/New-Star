@@ -53,13 +53,15 @@
                 <a class="nav-link" href="developers.html">مطورين</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="blogs.html">مقالات</a>
+                <a class="nav-link" href="blogs.html">مقالات</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about-us.html">من نحن</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact-us-page.html">أتصل بنا</a>
+                <a class="nav-link active" href="contact-us-page.html"
+                  >أتصل بنا</a
+                >
               </li>
             </ul>
           </div>
@@ -81,12 +83,12 @@
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
               <li class="breadcrumb-item active" aria-current="page">
-                مقالاتنا
+                تواصل معنا
               </li>
             </ol>
-            <h2>الأخبار & المقالات</h2>
+            <h2>نرحب باستفسارك دائما</h2>
           </div>
-          <div class="contact-us">
+          <div class="contact-us" style="position: fixed; right: -100%">
             <a
               href="tel: +201009194925"
               class="d-flex align-items-center justify-content-between mb-2"
@@ -110,170 +112,81 @@
       </div>
     </nav>
     <!-- ================================== < Content > ================================== -->
-    <section class="blogs section-top mb-5">
+    <section class="contact-us-page section-top mb-5">
       <div class="container">
-        <div class="row" style="gap: 20px 0">
-          <div class="col-lg-4">
-            <div class="card_v3">
-              <div class="card-img">
-                <img
-                  class="card-img-top"
-                  src="assets/images/Image 1.png"
-                  alt="image"
-                />
-                <div class="overlay"></div>
+        <div class="row">
+          <div class="col-xl-8">
+            <form action="" class="text-center mb-5">
+              <h4>أرسل أستفسارك وسيتم التواصل معك في أقرب وقت ممكن</h4>
+              <div class="row">
+                <div class="col-xl-6">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="الأسم"
+                    class="mb-3"
+                  />
+                </div>
+                <div class="col-xl-6">
+                  <input
+                    type="number"
+                    name="phone-number"
+                    id="phone-number"
+                    class="mb-3"
+                    placeholder="رقم الهاتف"
+                  />
+                </div>
+                <div class="col-12">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="mb-3"
+                    placeholder="البريد الإلكتروني"
+                  />
+                </div>
+                <div class="col-12">
+                  <textarea
+                    name="inquiry"
+                    id="inquiry"
+                    placeholder="أستفسارك"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
               </div>
-              <div class="card-body text-center">
-                <h4 class="card-title">10 نصائح عقارية لشراء عقار</h4>
-                <a href="blogs-details.html" class="card-link">تفاصيل</a>
-              </div>
+              <button
+                class="button button-blue mt-3"
+                type="submit"
+                style="width: 200px"
+              >
+                ارسال
+              </button>
+            </form>
+          </div>
+
+          <div class="col-xl-4">
+            <div class="other-contact">
+              <a
+                href="tel: +201009194925"
+                class="d-flex align-items-center justify-content-between mb-3"
+              >
+                <span class="d-flex align-items-center">
+                  <i class="fas fa-mobile me-2"></i>
+                </span>
+
+                +201009194925
+              </a>
+              <a
+                href="#"
+                class="d-flex align-items-center justify-content-between"
+              >
+                <i class="fab fa-whatsapp"></i>
+                تواصل معنا من خلال الواتسب
+              </a>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="card_v3">
-              <div class="card-img">
-                <img
-                  class="card-img-top"
-                  src="assets/images/Image 1.png"
-                  alt="image"
-                />
-                <div class="overlay"></div>
-              </div>
-              <div class="card-body text-center">
-                <h4 class="card-title">10 نصائح عقارية لشراء عقار</h4>
-                <a href="blogs-details.html" class="card-link">تفاصيل</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card_v3">
-              <div class="card-img">
-                <img
-                  class="card-img-top"
-                  src="assets/images/Image 1.png"
-                  alt="image"
-                />
-                <div class="overlay"></div>
-              </div>
-              <div class="card-body text-center">
-                <h4 class="card-title">10 نصائح عقارية لشراء عقار</h4>
-                <a href="blogs-details.html" class="card-link">تفاصيل</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card_v3">
-              <div class="card-img">
-                <img
-                  class="card-img-top"
-                  src="assets/images/Image 1.png"
-                  alt="image"
-                />
-                <div class="overlay"></div>
-              </div>
-              <div class="card-body text-center">
-                <h4 class="card-title">10 نصائح عقارية لشراء عقار</h4>
-                <a href="blogs-details.html" class="card-link">تفاصيل</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card_v3">
-              <div class="card-img">
-                <img
-                  class="card-img-top"
-                  src="assets/images/Image 1.png"
-                  alt="image"
-                />
-                <div class="overlay"></div>
-              </div>
-              <div class="card-body text-center">
-                <h4 class="card-title">10 نصائح عقارية لشراء عقار</h4>
-                <a href="blogs-details.html" class="card-link">تفاصيل</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card_v3">
-              <div class="card-img">
-                <img
-                  class="card-img-top"
-                  src="assets/images/Image 1.png"
-                  alt="image"
-                />
-                <div class="overlay"></div>
-              </div>
-              <div class="card-body text-center">
-                <h4 class="card-title">10 نصائح عقارية لشراء عقار</h4>
-                <a href="blogs-details.html" class="card-link">تفاصيل</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card_v3">
-              <div class="card-img">
-                <img
-                  class="card-img-top"
-                  src="assets/images/Image 1.png"
-                  alt="image"
-                />
-                <div class="overlay"></div>
-              </div>
-              <div class="card-body text-center">
-                <h4 class="card-title">10 نصائح عقارية لشراء عقار</h4>
-                <a href="blogs-details.html" class="card-link">تفاصيل</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card_v3">
-              <div class="card-img">
-                <img
-                  class="card-img-top"
-                  src="assets/images/Image 1.png"
-                  alt="image"
-                />
-                <div class="overlay"></div>
-              </div>
-              <div class="card-body text-center">
-                <h4 class="card-title">10 نصائح عقارية لشراء عقار</h4>
-                <a href="blogs-details.html" class="card-link">تفاصيل</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card_v3">
-              <div class="card-img">
-                <img
-                  class="card-img-top"
-                  src="assets/images/Image 1.png"
-                  alt="image"
-                />
-                <div class="overlay"></div>
-              </div>
-              <div class="card-body text-center">
-                <h4 class="card-title">10 نصائح عقارية لشراء عقار</h4>
-                <a href="blogs-details.html" class="card-link">تفاصيل</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex align-items-center justify-content-center">
-          <nav aria-label="Page navigation example ">
-            <ul class="pagination mt-4 p-0">
-              <li class="page-item">
-                <a class="page-link" href="#">السابق</a>
-              </li>
-              <li class="page-item active">
-                <a class="page-link" href="#">1</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">التالي</a>
-              </li>
-            </ul>
-          </nav>
         </div>
       </div>
     </section>

@@ -85,30 +85,35 @@ if (document.querySelector(".section-type-swiper") !== null) {
   });
 }
 
-const togglerSideContactUs = document.querySelector(".toggler-side-contact-us");
-const contactContainer = document.querySelector(
-  ".breadcrumb-content .contact-us"
-);
+if (document.querySelector(".toggler-side-contact-us") !== null) {
+  const togglerSideContactUs = document.querySelector(
+    ".toggler-side-contact-us"
+  );
 
-let contactOpen = false;
+  const contactContainer = document.querySelector(
+    ".breadcrumb-content .contact-us"
+  );
 
-togglerSideContactUs.addEventListener("click", () => {
-  if (contactOpen) {
-    contactContainer.style.right = "-100%";
-    contactOpen = false;
-    togglerSideContactUs.innerHTML = `
+  let contactOpen = false;
+
+  togglerSideContactUs.addEventListener("click", () => {
+    if (contactOpen) {
+      contactContainer.style.right = "-100%";
+      contactOpen = false;
+      togglerSideContactUs.innerHTML = `
       تواصل معنا
       <i class="fas fa-mobile me-1"></i>
     `;
-  } else {
-    contactContainer.style.right = "10px";
-    contactOpen = true;
-    togglerSideContactUs.innerHTML = `
+    } else {
+      contactContainer.style.right = "10px";
+      contactOpen = true;
+      togglerSideContactUs.innerHTML = `
     أغلق
     <i class="fas fa-times-circle me-1"></i>
   `;
-  }
-});
+    }
+  });
+}
 
 // Collapse Components
 const collapseTitle = document.querySelectorAll(".collapse_v1 .collapse-title");

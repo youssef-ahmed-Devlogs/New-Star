@@ -15,7 +15,6 @@
   <li>Developer Project Done ✔️</li>
   <li>Blogs Page Done ✔️</li>
   <li>Blogs Details Page Done ✔️</li>
-  <li>
-    Loading... ⏳
-  </li>
+  <li>Contact Us Done ✔️</li>
+  <li>About Us Done ✔️</li>
 </ol>
