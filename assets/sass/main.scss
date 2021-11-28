@@ -1315,6 +1315,65 @@ header {
   }
 }
 
+// 404
+
+.not-found-page {
+  .hero-form {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    background-color: rgba($color: $white, $alpha: 0.5);
+    padding: 20px 25px;
+
+    .form-select {
+      background-image: none;
+    }
+
+    .form-item {
+      position: relative;
+    }
+
+    .form-item i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+    }
+
+    input,
+    select,
+    button {
+      width: 100%;
+      border: none;
+      outline: none;
+      height: 50px;
+      border-radius: 6px;
+    }
+
+    select {
+      padding-right: 10px;
+      appearance: none;
+    }
+
+    .invalid-feedback {
+      position: absolute;
+      bottom: -50px;
+      background: $white;
+      padding: 10px;
+      z-index: 1;
+    }
+  }
+}
+
+.not-found-page_content {
+  @media (max-width: 992px) {
+    .not-found-img {
+      max-width: 100%;
+    }
+  }
+}
+
 // ================================== Footer ==================================
 footer {
   background: linear-gradient(90deg, #26328ae1 100%),

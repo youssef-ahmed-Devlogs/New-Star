@@ -1301,6 +1301,66 @@ header {
   background: #25d366;
 }
 
+.not-found-page .hero-form {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (minmax(290px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px 25px;
+}
+
+.not-found-page .hero-form .form-select {
+  background-image: none;
+}
+
+.not-found-page .hero-form .form-item {
+  position: relative;
+}
+
+.not-found-page .hero-form .form-item i {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 20px;
+}
+
+.not-found-page .hero-form input,
+.not-found-page .hero-form select,
+.not-found-page .hero-form button {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 50px;
+  border-radius: 6px;
+}
+
+.not-found-page .hero-form select {
+  padding-right: 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.not-found-page .hero-form .invalid-feedback {
+  position: absolute;
+  bottom: -50px;
+  background: #fff;
+  padding: 10px;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .not-found-page_content .not-found-img {
+    max-width: 100%;
+  }
+}
+
 footer {
   background: -webkit-gradient(linear, left top, right top, to(#26328ae1)), url("../images/Image 1.png");
   background: linear-gradient(90deg, #26328ae1 100%), url("../images/Image 1.png");

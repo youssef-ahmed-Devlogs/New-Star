@@ -17,4 +17,5 @@
   <li>Blogs Details Page Done ✔️</li>
   <li>Contact Us Done ✔️</li>
   <li>About Us Done ✔️</li>
+  <li>404 Page Done ✔️</li>
 </ol>
